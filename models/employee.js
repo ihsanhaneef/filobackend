@@ -1,3 +1,5 @@
+// models/employee.js
+
 import { Schema, model } from 'mongoose';
 import bcrypt from 'bcrypt';
 import timeRecordSchema from './timeRecord.js'; // Make sure to include .js extension
@@ -11,6 +13,7 @@ const employeeSchema = new Schema(
         address: { type: String, required: true },
         phonenumber: { type: String, required: true },
         gender: { type: String, required: true },
+        profileImage: { type: String }, // Add this line
         timeRecords: [timeRecordSchema] // Array of time records
     },
     {

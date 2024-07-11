@@ -6,6 +6,7 @@ const teamleaderSchema = new Schema(
     {
         email : { type : String , unique : true , required : true },
         passwordhash : { type : String , required : true },
+        department: { type: String, required: true },
         approved: { type: Boolean, default: false },
     },
     {
